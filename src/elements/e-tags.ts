@@ -30,6 +30,7 @@ export class TagsElement extends LitElement {
 	#apply_global_view_transition_names_stylesheet() {
 		const SHEET_ID = 'e-tags__view-transitions';
 		const el = document.head.querySelector(SHEET_ID) ?? document.createElement('style');
+		el.id = SHEET_ID;
 
 		const rules = this.tags
 			.map(tag => {
