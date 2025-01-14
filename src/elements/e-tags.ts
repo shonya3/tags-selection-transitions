@@ -82,7 +82,6 @@ export class TagsElement extends LitElement {
 
 		const transition = startViewTransition(async () => {
 			this.selected_tags = [...this.selected_tags, tag];
-			await this.updateComplete;
 		});
 		if (transition) {
 			await transition.finished;
@@ -97,7 +96,6 @@ export class TagsElement extends LitElement {
 
 		const transition = startViewTransition(async () => {
 			this.selected_tags = this.selected_tags.filter(t => t !== tag);
-			await this.updateComplete;
 		});
 		if (transition) {
 			await transition.finished;
